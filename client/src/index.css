@@ -1,13 +1,121 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  font-size: 16px;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  background-color: #efefef;
+}
+
+#root {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+
+.App {
+  width: 100%;
+  max-width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid #333;
+  box-shadow: 0px 0px 15px gray;
+}
+
+.Header, .Footer {
+  width: 100%;
+  background-color: rgb(88, 119, 212);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.Login{
+  position: relative;
+  float: right;
+}
+ .ReadCSVfile {
+  display: flex;
+  flex-direction: row;
+ }
+ .AcceptedFile {
+  border: '1px solid #ccc';
+  height: 40;
+  line-height: 2.5;
+  padding-Left: 10;
+  min-width: 80px;
+  padding-right: 0.5rem;
+ }
+.AddFile, .RemoveFile {
+  height: 40px;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  font-size: 1rem;
+  background-color: rgb(248, 245, 245);
+  color: royalblue;
+  cursor: pointer;
+}
+.AddFile:focus, .RemoveFile:focus,
+.AddFile:hover, .RemoveFile:hover {
+  color: aliceblue;
+  background-color: royalblue;
+  outline: none;
+}
+
+.Header h1 {
+  font-size: 1.5rem;
+  
+}
+
+.Header svg {
+  font-size: 2rem;
+}
+
+.Footer {
+  padding: 0.75rem;
+  display: grid;
+  place-content: center;
+}
+
+.Nav {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-bottom: solid rgb(133, 128, 128);
+  padding: 0.5rem;
+}
+
+.DisplayData {
+  width: 100%;
+  flex-grow: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  background-color: #fff;
+}
+
+td {
+  border: 1px solid #000;
+  padding: 0.25rem;
 }
