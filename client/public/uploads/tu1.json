@@ -1,0 +1,98 @@
+{
+    "coord": {
+        "lon": [
+            -85.7253
+        ],
+        "lat": [
+            32.4145
+        ]
+    },
+    "weather": [
+        {
+            "id": 800,
+            "main": "Clear",
+            "description": "clear sky",
+            "icon": "01d"
+        }
+    ],
+    "base": [
+        "stations"
+    ],
+    "main": {
+        "temp": [
+            288.53
+        ],
+        "feels_like": [
+            287.27
+        ],
+        "temp_min": [
+            286.77
+        ],
+        "temp_max": [
+            289.73
+        ],
+        "pressure": [
+            1021
+        ],
+        "humidity": [
+            44
+        ],
+        "sea_level": [
+            1021
+        ],
+        "grnd_level": [
+            1009
+        ]
+    },
+    "visibility": [
+        10000
+    ],
+    "wind": {
+        "speed": [
+            2.88
+        ],
+        "deg": [
+            359
+        ],
+        "gust": [
+            4.14
+        ]
+    },
+    "clouds": {
+        "all": [
+            0
+        ]
+    },
+    "dt": [
+        1644350433
+    ],
+    "sys": {
+        "type": [
+            2
+        ],
+        "id": [
+            2019982
+        ],
+        "country": [
+            "US"
+        ],
+        "sunrise": [
+            1644323520
+        ],
+        "sunset": [
+            1644362536
+        ]
+    },
+    "timezone": [
+        -21600
+    ],
+    "id": [
+        0
+    ],
+    "name": [
+        "Tuskegee Institute"
+    ],
+    "cod": [
+        200
+    ]
+}

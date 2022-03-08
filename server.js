@@ -1,9 +1,11 @@
 const express = require('express');
 const fileUpload = require('express-fileupload');
-
+const cors = require('cors');
 const app = express();
 
 app.use(fileUpload());
+app.use(cors());
+
 
 // Upload Endpoint
 app.post('/upload', (req, res) => {
@@ -21,6 +23,11 @@ app.post('/upload', (req, res) => {
 
     res.json({ fileName: file.name, filePath: `/uploads/${file.name}` });
   });
+});
+
+app.delete("/upload", (req, res) => {
+  console.log(`File deleted`)
+  return res.status(200).json({ result: true, msg: 'file deleted' });
 });
 
 app.listen(5000, () => console.log('Server Started...'));

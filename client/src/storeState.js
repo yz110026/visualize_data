@@ -2,6 +2,10 @@ import { createStore, action, thunk, computed } from "easy-peasy";
 
 
 export default createStore({
+    files: [],
+    setFiles: action((state, payload) => {
+        state.files = payload
+    }),
     fileName: '',
     setFileName: action((state, payload) => {
         state.fileName = payload

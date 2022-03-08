@@ -4,7 +4,12 @@ import { useStoreActions, useStoreState } from 'easy-peasy';
 
 const ReadCSVfile = () => {
     const setFileContent = useStoreActions((actions) => actions.setFileContent);
+    const setFileName = useStoreActions((actions) => actions.setFileName);
+    const setFiles = useStoreActions((actions) => actions.setFiles);
+
     const ifLogin = useStoreState((state) => state.ifLogin);
+    const files = useStoreState((state) => state.files);
+
     const { CSVReader } = useCSVReader();
   return (
     <CSVReader onUploadAccepted = {(results) => {
@@ -12,7 +17,7 @@ const ReadCSVfile = () => {
         console.log(results);
         console.log('---------------------------');
         ifLogin ? setFileContent(results.data) : setFileContent([])
-        
+        console.log({files})
       }}>
     {({
         getRootProps,
@@ -26,7 +31,7 @@ const ReadCSVfile = () => {
               Browse file
             </button>
             <div className='AcceptedFile'>
-              {acceptedFile && acceptedFile.name ? acceptedFile.name : 'Choose a CSV file'}
+              {acceptedFile && acceptedFile.name ? acceptedFile.name && setFileName(acceptedFile.name) : 'Choose a CSV file'}
               
             </div>
             <button className='RemoveFile'{...getRemoveFileProps()} onClick={() => {setFileContent([])}}>
